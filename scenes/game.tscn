@@ -1,0 +1,81 @@
+[gd_scene load_steps=3 format=3 uid="uid://qw02dhlx5yle"]
+
+[ext_resource type="Script" uid="uid://cpge5oekb0opv" path="res://scripts/ocho_reinas_game.gd" id="1_yqjtg"]
+[ext_resource type="Script" uid="uid://cr547g74j66hy" path="res://scripts/ocho_reinas_board.gd" id="2_yqjtg"]
+
+[node name="Game" type="Node2D"]
+position = Vector2(3, 2)
+script = ExtResource("1_yqjtg")
+
+[node name="Board" type="Node2D" parent="."]
+position = Vector2(-2, 0)
+script = ExtResource("2_yqjtg")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 482.0
+offset_bottom = 482.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0124481
+anchor_top = -0.00829876
+anchor_right = -0.0124481
+anchor_bottom = -0.00829876
+offset_right = 487.0
+offset_bottom = 488.0
+color = Color(0.164706, 0.164706, 0.164706, 0.729412)
+metadata/_edit_use_anchors_ = true
+
+[node name="InstructionLabel" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 20
+text = "Haz clic en una casilla para colocar tu reina"
+
+[node name="ResultLabel" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.458506
+anchor_top = 0.350622
+anchor_right = 0.460581
+anchor_bottom = 0.350622
+offset_left = -143.0
+offset_top = -48.0
+offset_right = 143.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+metadata/_edit_use_anchors_ = true
+
+[node name="Reiniciar" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.475104
+anchor_top = 0.363071
+anchor_right = 0.475104
+anchor_bottom = 0.363071
+offset_left = -52.0
+offset_top = 19.0
+offset_right = 45.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Resolver" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+disabled = true
+text = "Resolver"
+
+[connection signal="pressed" from="Control/Reiniciar" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Resolver" to="." method="_on_solve_button_pressed"]
