@@ -19,6 +19,8 @@ func init_game():
 	user_placed_queen = false
 	solving = false
 	result_label.hide()
+	reset_button.hide()
+	solve_button.show()
 	instruction_label.text = "Haz clic en una casilla para colocar tu reina"
 	solve_button. disabled = true
 
@@ -49,6 +51,7 @@ func _on_solve_button_pressed():
 	
 	solving = true
 	instruction_label.text = "Buscando solución..."
+	solve_button.hide()
 	
 	# Pequeña pausa para mostrar el mensaje
 	await get_tree().create_timer(0.1).timeout
@@ -63,6 +66,7 @@ func _on_solution_found(positions: Array):
 	result_label.text = "SOLUCIÓN ENCONTRADA!\nSe pueden colocar 8 reinas"
 	result_label.add_theme_color_override("font_color", Color.GREEN)
 	result_label.show()
+	reset_button.show() 
 	instruction_label.text = "Las 8 reinas están colocadas sin atacarse"
 
 func _on_no_solution():
@@ -70,9 +74,10 @@ func _on_no_solution():
 	result_label.text = "NO ES POSIBLE\nNo se pueden colocar 7 reinas más\ndesde esta posición inicial"
 	result_label.add_theme_color_override("font_color", Color.RED)
 	result_label.show()
+	reset_button.show()
 	instruction_label.text = "Intenta con otra posición inicial"
 
 func _on_reset_button_pressed():
 	board.clear_all_queens()
 	init_game()
-	result_label.hide()
+	#result_label.hide()

@@ -30,7 +30,7 @@ offset_bottom = 488.0
 color = Color(0.164706, 0.164706, 0.164706, 0.729412)
 metadata/_edit_use_anchors_ = true
 
-[node name="InstructionLabel" type="Label" parent="Control"]
+[node name="Instruction Label" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -39,7 +39,7 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 20
 text = "Haz clic en una casilla para colocar tu reina"
 
-[node name="ResultLabel" type="Label" parent="Control"]
+[node name="Result Label" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.458506
@@ -55,27 +55,30 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 35
 metadata/_edit_use_anchors_ = true
 
-[node name="Reiniciar" type="Button" parent="Control"]
+[node name="Reset Button" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.475104
-anchor_top = 0.363071
-anchor_right = 0.475104
-anchor_bottom = 0.363071
+anchor_left = 0.473029
+anchor_top = 0.520747
+anchor_right = 0.473029
+anchor_bottom = 0.520747
 offset_left = -52.0
 offset_top = 19.0
 offset_right = 45.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+text = "Reiniciar"
 metadata/_edit_use_anchors_ = true
 
-[node name="Resolver" type="Button" parent="Control"]
+[node name="Solve Button" type="Button" parent="Control"]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 395.0
+offset_top = 443.0
+offset_right = 470.0
+offset_bottom = 474.0
 disabled = true
 text = "Resolver"
 
-[connection signal="pressed" from="Control/Reiniciar" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Control/Resolver" to="." method="_on_solve_button_pressed"]
+[connection signal="pressed" from="Control/Reset Button" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Control/Solve Button" to="." method="_on_solve_button_pressed"]

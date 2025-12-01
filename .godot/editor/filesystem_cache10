@@ -1,0 +1,17 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1764569983
+export_presets.cfg::TextFile::-1::1764542822::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D::3521328858100746145::1764542822::1764569983::1::::<><><>0<>0<>c1114e089870dbeb9aff35a70620a556<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+pieces.png::CompressedTexture2D::7355245938767582817::1764542822::1764569983::1::::<><><>0<>0<>6fbc9d0d373f24b816ad5aabb800866e<>res://.godot/imported/pieces.png-a87186d087c7af4e112c219279253665.ctex::
+::res://media/::1764564869
+demo-1.jpg::CompressedTexture2D::551191043429885337::1764542822::1764569984::1::::<><><>0<>0<>4d45a3654a4ef3d33bdf0a31c4501263<>res://.godot/imported/demo-1.jpg-cfd16d25037d4bfa03c92eaa3879f03b.ctex::
+icon.jpg::CompressedTexture2D::65365397218671141::1764542822::1764569983::1::::<><><>0<>0<>3a56ee9d239a7070a224989551098e03<>res://.godot/imported/icon.jpg-db651437363ae2ce62a903a568fc9d77.ctex::
+::res://scenes/::1764568862
+game.tscn::PackedScene::1170004118967840986::1764568862::0::1::::<><><>0<>0<><>::uid://cpge5oekb0opv::::res://scripts/ocho_reinas_game.gd<>uid://cr547g74j66hy::::res://scripts/ocho_reinas_board.gd
+Piece.tscn::PackedScene::4047662599425010827::1764568804::0::1::::<><><>0<>0<><>::uid://dc163c38ayxmn::::res://pieces.png<>uid://bm7r5r1csrypt::::res://scripts/piece.gd
+::res://scripts/::1764568772
+board.gd::GDScript::72687047982877738::1764564236::0::1::::<>Node2D<><>0<>0<><>::
+globals.gd::GDScript::2917521146006828031::1764565837::0::1::::<>Node<><>0<>0<><>::
+ocho_reinas_board.gd::GDScript::6029801345954481066::1764568585::0::1::::<>Node2D<><>0<>0<><>::
+ocho_reinas_game.gd::GDScript::5838357472232068835::1764568767::0::1::::<>Node2D<><>0<>0<><>::
+piece.gd::GDScript::3295833591351067865::1764566225::0::1::::<>Node2D<><>0<>0<><>::
